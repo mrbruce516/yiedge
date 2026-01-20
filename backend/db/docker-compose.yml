@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mysql:lts
+    container_name: yiedge_db
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=zc990516
+    volumes:
+      - ./data:/var/lib/mysql:rw
+    restart: unless-stopped
